@@ -4,7 +4,7 @@
   --primary-color: #faf9f6;
   --secondary-color: #000;
   --content-padding: 30px;
-  font-family: "IBM Plex Sans - Regular", sans-serif;
+  font-family: "IBM Plex Sans - Medium", sans-serif;
   letter-spacing: 1px;
 }
 
@@ -31,7 +31,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  padding: var(--content-padding) 0;
   width: 50%;
   background-color: var(--primary-color);
 }
@@ -105,6 +105,7 @@ p {
   animation: fadeInAndMoveDown 0.8s cubic-bezier(0.19, 1, 0.22, 1) 1s forwards;
   font-size: 24px;
   line-height: 36px;
+  font-weight: 500;
   margin-bottom: var(--content-padding);
   text-wrap: pretty;
   padding: 0 var(--content-padding);
