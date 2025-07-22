@@ -34,6 +34,7 @@ body {
   padding: var(--content-padding) 0;
   width: 50%;
   background-color: var(--primary-color);
+  overflow-x: hidden;
 }
 
 .container {
