@@ -1,7 +1,7 @@
 @import "./reset.css";
 
 :root {
-  --primary-color: #faf9f6;
+  --primary-color: #efefef;
   --secondary-color: #000;
   --content-padding: 30px;
   font-family: "IBM Plex Sans - Medium", sans-serif;
@@ -133,7 +133,7 @@ li {
 }
 
 li:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px) scale(1.01);
   rotate: 2deg;
   box-shadow: 4px 6px 0 var(--secondary-color);
 }
