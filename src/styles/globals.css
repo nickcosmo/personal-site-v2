@@ -95,8 +95,11 @@ h1 {
 }
 
 a {
+  display: block;
   text-decoration: none;
   color: inherit;
+  height: 100%;
+  margin: 5px;
 }
 
 p {
@@ -118,12 +121,12 @@ p {
   padding: 0;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   gap: 30px;
 }
 
 li {
-  padding: 5px;
+  /* padding: 5px; */
   transition: all 0.2s ease;
   background-color: var(--primary-color);
   border: 1px solid var(--secondary-color);
@@ -156,7 +159,6 @@ li:hover {
   }
 
   .links {
-    display: flex;
     flex-wrap: wrap;
   }
 }
@@ -181,8 +183,7 @@ li:hover {
   }
 
   .links {
-    gap: 5px;
-    justify-content: center;
+    gap: 15px;
   }
 
   h1 {
@@ -197,15 +198,18 @@ li:hover {
   }
 
   body {
-    width: 90%;
     justify-content: start;
     max-height: fit-content;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   :root {
     --content-padding: 15px;
+  }
+
+  body {
+    width: 90%;
   }
 
   .links {
