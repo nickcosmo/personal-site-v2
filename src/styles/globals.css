@@ -1,7 +1,7 @@
 @import "./reset.css";
 
 :root {
-  --primary-color: #efefef;
+  --primary-color: #f0f0f0;
   --secondary-color: #000;
   --content-padding: 30px;
   font-family: Suisse, Helvetica, Arial, sans-serif;
@@ -53,7 +53,7 @@ body {
     width: 200px;
     opacity: 0%;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 8px;
     margin-right: var(--content-padding);
     animation: fadeInAndMoveDown 1s cubic-bezier(0.19, 1, 0.22, 1) 0.3s forwards;
   }
@@ -125,7 +125,7 @@ li {
   transition: all 0.2s ease;
   background-color: var(--primary-color);
   border: 1px solid var(--secondary-color);
-  border-radius: 10px;
+  border-radius: 8px;
   text-wrap: nowrap;
   padding: 0 5px;
 }
