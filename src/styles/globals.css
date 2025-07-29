@@ -55,6 +55,7 @@ body {
   background-color: var(--accent-color);
   width: max-content;
   margin-right: 10px;
+  overflow: hidden;
   height: 200px;
   opacity: 0%;
   border: solid 2px var(--secondary-color);
