@@ -1,5 +1,17 @@
 # My Website
 
-This is the repo for my simple (for now) website. I might add a blog section for my posts instead of posting on [dev.to](https://dev.to/nickcosmo/).
+This is my personal website where I share my thoughts, projects, and blog posts. 
 
-Built with Astro and deployed on Vercel.
+The site is built using [Astro](https://astro.build/).
+
+
+## TODO
+
+- [ ] Add footer
+- [ ] og images for blog posts
+- [ ] Add tags for blog posts
+- [X] mobile styling for new header
+- [X] better styling for blog posts - target links, code blocks, images, etc.
+- [X] Add layout for blog posts
+- [X] Move stuff from obsidian to this location
+- [X] Add props to layout components

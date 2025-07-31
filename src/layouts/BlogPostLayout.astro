@@ -1,6 +1,19 @@
 ---
 import Header from "../components/Header.astro";
 import Divider from "../components/Divider.astro";
+
+import "../styles/globals.css";
+
+interface Props {
+  id: string;
+  title: string;
+  author: string;
+  description: string;
+  tags: string[];
+  published: string | Date;
+}
+
+const { id, title, description, published } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,19 +24,13 @@ import Divider from "../components/Divider.astro";
     <link rel="icon" href="/pizza.ico" type="image/x-icon" />
     <meta name="generator" content={Astro.generator} />
     <meta name="author" content="Nick Cosmo" />
-    <title>Nick Cosmo</title>
+    <title>{title}</title>
 
     <!-- OG Tags -->
-    <meta property="og:title" content="Nick Cosmo" />
+    <meta property="og:title" content={title} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.nickcosmo.com/" />
-    <meta
-      property="og:description"
-      content="I’m a software engineer and web developer based in Portland,
-        OR. I specialize in the JavaScript and TypeScript ecosystem and I’m
-        passionate about building products and features that solve hard problems
-        and enhance user experiences."
-    />
+    <meta property="og:url" content={`https://www.nickcosmo.com/blog/${id}`} />
+    <meta property="og:description" content={description} />
     <meta
       property="og:image"
       content="https://www.nickcosmo.com/og-image.png"
@@ -33,6 +40,13 @@ import Divider from "../components/Divider.astro";
   <body class="fadeIn">
     <Header />
     <Divider />
-    <slot />
+    <div class="container">
+      <h1>{title}</h1>
+      <p>{new Date(published).toLocaleDateString()}</p>
+      <Divider />
+      <slot />
+    </div>
   </body>
 </html>
+
+<style is:global></style>

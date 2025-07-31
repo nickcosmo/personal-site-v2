@@ -1,0 +1,60 @@
+---
+import { getCollection } from "astro:content";
+import "../../styles/globals.css";
+import "../../styles/blog-post.css";
+import { render } from "astro:content";
+import type { AstroComponentFactory } from "astro/runtime/server/index.js";
+import BlogPostLayout from "../../layouts/BlogPostLayout.astro";
+
+export async function getStaticPaths() {
+  const blog = await getCollection("blog");
+
+  const allPosts = blog.filter((post) => !!post.data.published);
+
+  const builtParams = await Promise.all(
+    allPosts.map(async (post) => {
+      const id = post.id.split("/").pop() || "";
+      const { Content } = await render(post);
+      return {
+        params: {
+          id,
+        },
+        props: {
+          id: post.id,
+          title: post.data.title,
+          published: post.data.published,
+          Content,
+        },
+      };
+    })
+  );
+
+  return builtParams;
+}
+
+interface Props {
+  id: string;
+  title: string;
+  author: string;
+  description: string;
+  tags: string[];
+  published: Date;
+  Content: AstroComponentFactory;
+}
+
+const { title, published, Content, id, author, description, tags } =
+  Astro.props;
+---
+
+<BlogPostLayout
+  title={title}
+  id={id}
+  published={published}
+  author={author}
+  description={description}
+  tags={tags}
+>
+  <Content />
+</BlogPostLayout>
+
+<style></style>
