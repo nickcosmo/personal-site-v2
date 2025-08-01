@@ -23,6 +23,7 @@ export async function getStaticPaths() {
           id: post.id,
           title: post.data.title,
           published: post.data.published,
+          ogImage: post.data.ogImage,
           Content,
         },
       };
@@ -38,11 +39,12 @@ interface Props {
   author: string;
   description: string;
   tags: string[];
+  ogImage: string;
   published: Date;
   Content: AstroComponentFactory;
 }
 
-const { title, published, Content, id, author, description, tags } =
+const { title, published, Content, id, author, description, tags, ogImage } =
   Astro.props;
 ---
 
@@ -50,6 +52,7 @@ const { title, published, Content, id, author, description, tags } =
   title={title}
   id={id}
   published={published}
+  ogImage={ogImage}
   author={author}
   description={description}
   tags={tags}

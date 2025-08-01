@@ -2,6 +2,7 @@
 title: Auto-Incrementing Version Column With PostgreSQL Triggers
 description: Learn how to create a PostgreSQL trigger to automatically increment a version column on updates, ensuring data integrity and simplifying version management.
 tags: ["PostgreSQL", "Triggers", "Database"]
+ogImage: og-images/auto-incrementing-version-column-with-postgres-triggers.png
 author: Nick Cosmo
 published: 2025-07-23
 ---

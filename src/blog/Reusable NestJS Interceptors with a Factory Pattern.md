@@ -2,6 +2,7 @@
 title: Reusable NestJS Interceptors with a Factory Pattern
 description: Learn how to create reusable NestJS interceptors using a factory pattern to reduce code duplication and improve maintainability.
 tags: ["NestJS", "Interceptors", "Factory Pattern"]
+ogImage: og-images/reusable-nestjs-interceptors-factory-pattern.png
 author: Nick Cosmo
 published: 2025-05-25
 ---

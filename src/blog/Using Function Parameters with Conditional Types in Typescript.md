@@ -2,6 +2,7 @@
 title: Using Function Parameters with Conditional Types in Typescript
 description: A guide on how to use function parameters with conditional types in TypeScript to create flexible and type-safe functions.
 tags: ["TypeScript", "Conditional Types", "Programming"]
+ogImage: og-images/using-function-parameters-with-conditional-types-typescript.png
 author: Nick Cosmo
 published: 2024-04-04
 ---

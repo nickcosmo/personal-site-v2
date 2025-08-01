@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Divider from "../components/Divider.astro";
+import Footer from "../components/Footer.astro";
 
 import "../styles/globals.css";
 
@@ -11,9 +12,10 @@ interface Props {
   description: string;
   tags: string[];
   published: string | Date;
+  ogImage?: string;
 }
 
-const { id, title, description, published } = Astro.props;
+const { id, title, description, published, ogImage } = Astro.props;
 ---
 
 <!doctype html>
@@ -33,7 +35,7 @@ const { id, title, description, published } = Astro.props;
     <meta property="og:description" content={description} />
     <meta
       property="og:image"
-      content="https://www.nickcosmo.com/og-image.png"
+      content={`https://www.nickcosmo.com/${ogImage || "og-image.png"}`}
     />
     <meta property="og:image:alt" content="" />
   </head>
@@ -46,6 +48,7 @@ const { id, title, description, published } = Astro.props;
       <Divider />
       <slot />
     </div>
+    <Footer />
   </body>
 </html>
 

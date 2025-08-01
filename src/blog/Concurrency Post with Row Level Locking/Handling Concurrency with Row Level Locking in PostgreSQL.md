@@ -2,6 +2,7 @@
 title: Handling Concurrency with Row Level Locking in PostgreSQL
 description: A guide on how to handle concurrency issues in PostgreSQL using row-level locking with SELECT ... FOR UPDATE.
 tags: ["PostgreSQL", "Concurrency", "Database"]
+ogImage: og-images/handling-concurrency-with-row-level-locking-postgres.png
 author: Nick Cosmo
 published: 2025-06-20
 ---

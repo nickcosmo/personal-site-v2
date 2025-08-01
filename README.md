@@ -7,9 +7,10 @@ The site is built using [Astro](https://astro.build/).
 
 ## TODO
 
-- [ ] Add footer
-- [ ] og images for blog posts
 - [ ] Add tags for blog posts
+- [ ] View/Page transitions
+- [X] Add footer
+- [X] og images for blog posts
 - [X] mobile styling for new header
 - [X] better styling for blog posts - target links, code blocks, images, etc.
 - [X] Add layout for blog posts
