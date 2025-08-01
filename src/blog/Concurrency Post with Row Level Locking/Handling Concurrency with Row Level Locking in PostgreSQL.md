@@ -4,7 +4,7 @@ description: A guide on how to handle concurrency issues in PostgreSQL using row
 tags: ["PostgreSQL", "Concurrency", "Database"]
 ogImage: og-images/handling-concurrency-with-row-level-locking-postgres.png
 author: Nick Cosmo
-published: 2025-06-20
+published: 2025-06-26
 ---
 ## Introduction
 

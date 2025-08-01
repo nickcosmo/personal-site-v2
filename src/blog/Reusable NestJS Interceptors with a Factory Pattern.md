@@ -4,7 +4,7 @@ description: Learn how to create reusable NestJS interceptors using a factory pa
 tags: ["NestJS", "Interceptors", "Factory Pattern"]
 ogImage: og-images/reusable-nestjs-interceptors-factory-pattern.png
 author: Nick Cosmo
-published: 2025-05-25
+published: 2025-01-23
 ---
 
 ## Introduction

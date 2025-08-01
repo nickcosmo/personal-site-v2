@@ -4,7 +4,7 @@ description: Learn how to create a PostgreSQL trigger to automatically increment
 tags: ["PostgreSQL", "Triggers", "Database"]
 ogImage: og-images/auto-incrementing-version-column-with-postgres-triggers.png
 author: Nick Cosmo
-published: 2025-07-23
+published: 2025-02-04
 ---
 
 
