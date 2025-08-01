@@ -44,7 +44,7 @@ const { id, title, description, published, ogImage } = Astro.props;
     <Divider />
     <div class="container">
       <h1>{title}</h1>
-      <p>{new Date(published).toLocaleDateString()}</p>
+      <p><time>{new Date(published).toLocaleDateString()}</time></p>
       <Divider />
       <slot />
     </div>
