@@ -15,14 +15,14 @@
 }
 
 /* Global Tag Styles */
-
 html,
 body {
-  background-color: var(--primary-color);
+  background-image: url("/noise-light.png");
   color: var(--secondary-color);
 }
 
 body {
+  background: transparent;
   margin: auto;
   max-width: 800px;
   min-height: 100vh;
@@ -45,16 +45,22 @@ button {
   color: var(--primary-color);
   cursor: pointer;
   transition: all 0.3s ease;
+  background-image: url("/noise-light.png");
 }
 
 h1 {
-  color: var(--accent-color);
-  font-size: 64px;
+  font-size: 68px;
   line-height: 75px;
+  word-wrap: normal;
+  background-image: url("/blue-noise.png");
+  background-clip: text;
+  color: rgb(0 0 0 / 0%);
 }
 
 h2 {
-  color: var(--accent-color);
+  background-image: url("/blue-noise.png");
+  background-clip: text;
+  color: rgb(0 0 0 / 0%);
 }
 
 a {
@@ -74,7 +80,7 @@ p {
 }
 
 .bordered {
-  border: solid 2px var(--secondary-color);
+  border: 2px solid var(--secondary-color);
   border-radius: 10px;
   transition: all 0.2s ease;
 }

@@ -28,6 +28,7 @@ const { id, title, description, published, ogImage } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <meta name="author" content="Nick Cosmo" />
     <title>{title}</title>
+    <meta property="description" content={description} />
 
     <!-- OG Tags -->
     <meta property="og:title" content={title} />
@@ -46,7 +47,6 @@ const { id, title, description, published, ogImage } = Astro.props;
     <div class="container">
       <h1>{title}</h1>
       <p><time>{new Date(published).toLocaleDateString()}</time></p>
-      <Divider />
       <slot />
     </div>
     <Footer />

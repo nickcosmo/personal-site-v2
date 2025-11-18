@@ -12,7 +12,7 @@
   margin-right: 10px;
   overflow: hidden;
   height: 200px;
-  border: solid 2px var(--secondary-color);
+  background-image: url("/noise-light.png");
 
   & > img {
     width: 100%;

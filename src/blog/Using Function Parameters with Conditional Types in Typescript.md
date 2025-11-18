@@ -10,7 +10,7 @@ published: 2024-04-04
 
 A common scenario when building with Typescript is having a function that should conditionally return one of two different types from a function, while still getting Typescript's static typing benefits. You can always use `as`, but this can lead to errors in case logic from your function ever changes. 
 
-This scenario can be solved by constructing a conditional type in Typescript. The concept itself is quite simple but becomes powerful when combined with querying data – which we will uncover towards the end of this post. But first, a contrived example...
+This scenario can be solved by constructing a conditional type in Typescript. The concept itself is quite simple but becomes powerful when combined with querying data, which we will uncover towards the end of this post. But first, a contrived example...
 
 ## A Basic Example
 

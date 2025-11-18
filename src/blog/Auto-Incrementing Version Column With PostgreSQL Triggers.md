@@ -69,7 +69,7 @@ A couple of points to note on the above statement:
 - I use `CREATE OR REPLACE` here which works as an "upsert" action for the function. If this is the first time creating a function just writing `CREATE` would have worked just fine.
 - The function is declared to return a trigger with `RETURNS TRIGGER`.
 - The `OLD` and `NEW` variables are available inside all Postgres triggers and correspond to the old table record and new table record respectively. The value for the column `version` is accessed through dot notation.
-- `LANGUAGE plpgsql` declares the SQL dialect in which the function is written.
+- `LANGUAGE plpgsql` declares that the function is written in the `PL/pgSQL` procedural language.
 
 Having the function, we can now apply the trigger to our table.
 
@@ -138,6 +138,8 @@ Since we have overwritten the function with `CREATE OR REPLACE FUNCTION`, the na
 ## Conclusion
 
 We were able to create a basic Postgres trigger to add versioning to our database records. This is a very simple use case, and the applications of Postgres triggers are endless. Hopefully this gives some insight into how easy it can be to implement a Postgres trigger and gets you thinking about what code-level logic can transition to your database layer.
+
+To read more about Postgres triggers, you can check out the docs [here](https://www.postgresql.org/docs/current/sql-createtrigger.html)
 
 Thanks for reading!
 

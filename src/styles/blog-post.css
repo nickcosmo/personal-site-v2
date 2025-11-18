@@ -33,15 +33,20 @@ a:hover {
   text-decoration: underline;
 }
 
-h1,
 h2,
 h3 {
   margin-bottom: var(--content-padding);
-  color: var(--accent-color);
+  background-image: url("/blue-noise.png");
+  background-clip: text;
+  color: rgb(0 0 0 / 0%);
 }
 
 img {
   max-width: 80%;
   height: auto;
   margin: auto;
+}
+
+p:not(:last-child) {
+  margin-bottom: var(--content-padding);
 }
