@@ -8,9 +8,9 @@ published: 2025-06-26
 ---
 ## Introduction
 
-In any scalable system where multiple requests are being handled at the same time. Whether it's a microservice architecture, a monolithic backend, or even direct access to a database, concurrency becomes a critical concern. These issues often arise in subtle ways, especially when requests attempt to read and write shared data simultaneously.
+In any scalable system where multiple requests are being handled at the same time. Whether it's a microservice architecture or a monolithic backend, concurrency becomes a critical concern.
 
-Concurrency issues can easily be overlooked because they are often edge cases at a certain scale. But if concurrency handling is not addressed early, they can result in data loss and many lost hours of debugging strange inconsistencies.
+Concurrency issues can easily be overlooked because they are often edge cases at a certain scale. But if concurrency handling is not addressed early, the result could be data loss and many lost hours of debugging strange inconsistencies.
 
 One strategy to address this sort of problem is at the database layer. I will cover one such approach by using PostgreSQL's row-level locking feature, specifically the `SELECT ... FOR UPDATE` statement. Taking the time to understand these sorts of problems and having a strategy in place will surely save you and your team trouble down the road.
 
