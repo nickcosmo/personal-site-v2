@@ -86,7 +86,7 @@ p {
 }
 
 .divider {
-  animation: growFromCenter 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+  animation: growFromCenter 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
   width: 100%;
   height: var(--border-width);
   background-color: var(--secondary-color);
@@ -101,7 +101,10 @@ p {
 
 @keyframes growFromCenter {
   0% {
-    transform: scaleX(0);
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.5);
   }
   100% {
     transform: scaleX(1);

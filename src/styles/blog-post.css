@@ -49,10 +49,6 @@ img {
   margin: auto;
 }
 
-p:not(:last-child) {
-  margin-bottom: var(--content-padding);
-}
-
 @media screen and (max-width: 800px) {
   code {
     font-size: 12px;
