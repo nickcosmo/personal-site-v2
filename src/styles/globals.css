@@ -79,8 +79,7 @@ p {
   corner-shape: squircle;
 }
 
-.bordered_active:hover,
-.bordered_active:active {
+.bordered_active:hover {
   transform: translateY(-6px) scale(1.01);
   /* rotate: 2deg; */
   box-shadow: 3px 5px var(--secondary-color);
@@ -151,6 +150,11 @@ p {
     font-size: 0.9em;
     line-height: normal;
     max-height: fit-content;
+  }
+
+  .bordered_active:active {
+    transform: translateY(0px) scale(1);
+    box-shadow: none;
   }
 }
 
