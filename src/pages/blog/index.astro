@@ -10,7 +10,7 @@ const allPosts = blog
   .filter((post) => !!post.data.published)
   .sort(
     (a, b) =>
-      (b.data.published || 0).valueOf() - (a.data.published || 0).valueOf()
+      (b.data.published || 0).valueOf() - (a.data.published || 0).valueOf(),
   );
 ---
 
@@ -42,13 +42,18 @@ const allPosts = blog
 <style>
   .post a {
     width: 100%;
+    display: block;
+    height: 100%;
     color: var(--secondary-color);
   }
 
-  .post:hover,
-  .post a:hover {
-    text-decoration: underline;
+  .post:hover {
     color: var(--accent-color);
+
+    > a {
+      text-decoration: underline;
+      color: var(--accent-color);
+    }
   }
 
   p {

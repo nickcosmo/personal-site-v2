@@ -1,29 +1,38 @@
 <header class="container">
-  <ul>
+  <div>
     <p>
       nick<span
         style="background-image: url('/blue-noise.png'); background-clip: text; color: rgb(0 0 0 / 0%);"
         >cosmo</span
       >
     </p>
-    <li>
-      <a
-        href="https://github.com/nickcosmo"
-        style="background-image: url(/github-mark.png);"></a>
-    </li>
-    <li>
-      <a
-        href="https://www.linkedin.com/in/nicholasclansing/"
-        style="background-image: url(/InBug-Black.png);"></a>
-    </li>
-  </ul>
-  <div>
-    <button class="bordered bordered_active"><a href="/">Home</a></button>
-    <button class="bordered bordered_active"><a href="/blog">Blog</a></button>
+
+    <ul class="social-links">
+      <li>
+        <a
+          href="https://github.com/nickcosmo"
+          style="background-image: url(/github-mark.png);"></a>
+      </li>
+      <li>
+        <a
+          href="https://www.linkedin.com/in/nicholasclansing/"
+          style="background-image: url(/InBug-Black.png);"></a>
+      </li>
+    </ul>
   </div>
+
+  <ul class="nav-links">
+    <li class="bordered bordered_active"><a href="/">HOME</a></li>
+    <li class="bordered bordered_active"><a href="/blog">BLOG</a></li>
+  </ul>
 </header>
 
 <style>
+  div:first-child {
+    display: flex;
+    flex-direction: row;
+  }
+
   p {
     font-size: 24px;
     font-weight: 600;
@@ -45,14 +54,14 @@
     list-style-type: none;
   }
 
-  ul li {
+  .social-links li {
     margin-left: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  ul a {
+  .social-links a {
     text-decoration: none;
     width: 25px;
     height: 25px;
@@ -61,51 +70,53 @@
     display: inline-block;
   }
 
-  ul a:hover {
+  .social-links a:hover {
     opacity: 0.6;
   }
 
-  button {
-    margin: 0 0 0 5px;
-    padding: 0;
-  }
-
-  button:not(:last-child) {
+  .nav-links li {
+    color: var(--secondary-color);
     margin: 0 5px;
-    padding: 0;
+    cursor: pointer;
+
+    > a {
+      text-decoration: none;
+      display: block;
+      margin: 1px 15px;
+      height: 100%;
+      color: var(--secondary-color);
+    }
   }
 
-  button a {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    height: 100%;
-    width: 100%;
-    padding: 4px 8px;
+  .nav-links li:last-child {
+    margin-right: 0px;
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 800px) {
     p {
       font-size: 16px;
     }
 
-    ul a {
+    .social-links a {
       width: 15px;
       height: 15px;
     }
 
-    ul li {
+    .social-links li {
       margin-left: 8px;
     }
 
-    button:not(:last-child) {
-      margin: 0 2px;
-      padding: 0;
+    .nav-links li {
+      margin: 0 5px;
+      font-size: 14px;
+
+      > a {
+        margin: 2px 15px;
+      }
     }
 
-    button {
-      padding: 0;
-      margin: 0 0 0 2px;
+    .nav-links li:last-child {
+      margin-right: 0px;
     }
   }
 </style>

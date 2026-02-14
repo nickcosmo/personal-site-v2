@@ -45,9 +45,15 @@ const { id, title, description, published, ogImage } = Astro.props;
     <Header />
     <Divider />
     <div class="container">
-      <h1>{title}</h1>
-      <p><time>{new Date(published).toLocaleDateString()}</time></p>
-      <slot />
+      <div>
+        <h1>{title}</h1>
+        <p>
+          <time>{new Date(published).toLocaleDateString()}</time>
+        </p>
+      </div>
+      <div class="blog-content">
+        <slot />
+      </div>
     </div>
     <Footer />
   </body>

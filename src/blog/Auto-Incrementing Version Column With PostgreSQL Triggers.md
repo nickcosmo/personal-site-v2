@@ -139,7 +139,7 @@ Since we have overwritten the function with `CREATE OR REPLACE FUNCTION`, the na
 
 We were able to create a basic Postgres trigger to add versioning to our database records. This is a very simple use case, and the applications of Postgres triggers are endless. Hopefully this gives some insight into how easy it can be to implement a Postgres trigger and gets you thinking about what code-level logic can transition to your database layer.
 
-To read more about Postgres triggers, you can check out the docs [here](https://www.postgresql.org/docs/current/sql-createtrigger.html)
+To read more about Postgres triggers, you can check out the docs [here](https://www.postgresql.org/docs/current/sql-createtrigger.html).
 
 Thanks for reading!
 

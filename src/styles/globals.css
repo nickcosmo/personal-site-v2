@@ -5,8 +5,9 @@
   --secondary-color: #000;
   --accent-color: royalblue;
   --light-gray: lightgray;
-  --content-padding: 30px;
-  font-family: Suisse, Helvetica, Arial, sans-serif;
+  --content-padding: 24px;
+  --border-width: 1.5px;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 @font-face {
@@ -17,6 +18,7 @@
 /* Global Tag Styles */
 html,
 body {
+  background-color: var(--primary-color);
   background-image: url("/noise-light.png");
   color: var(--secondary-color);
 }
@@ -40,16 +42,8 @@ main {
   flex: 1;
 }
 
-button {
-  background-color: var(--accent-color);
-  color: var(--primary-color);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  background-image: url("/noise-light.png");
-}
-
 h1 {
-  font-size: 68px;
+  font-size: 62px;
   line-height: 75px;
   word-wrap: normal;
   background-image: url("/blue-noise.png");
@@ -80,21 +74,22 @@ p {
 }
 
 .bordered {
-  border: 2px solid var(--secondary-color);
-  border-radius: 10px;
+  border: var(--border-width) solid var(--secondary-color);
+  border-radius: 7em;
   transition: all 0.2s ease;
+  corner-shape: squircle;
 }
 
 .bordered_active:hover {
-  transform: translateY(-8px) scale(1.01);
-  rotate: 2deg;
-  box-shadow: 4px 6px var(--secondary-color);
+  transform: translateY(-6px) scale(1.01);
+  /* rotate: 2deg; */
+  box-shadow: 3px 5px var(--secondary-color);
 }
 
 .divider {
   animation: growFromCenter 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
   width: 100%;
-  height: 2px;
+  height: var(--border-width);
   background-color: var(--secondary-color);
 }
 
@@ -152,17 +147,16 @@ p {
   body {
     font-size: 0.9em;
     line-height: normal;
-    justify-content: start;
     max-height: fit-content;
   }
 }
 
 @media screen and (max-width: 600px) {
   :root {
-    --content-padding: 20px;
+    --content-padding: 15px;
   }
 
   body {
-    width: 90%;
+    width: 95%;
   }
 }
