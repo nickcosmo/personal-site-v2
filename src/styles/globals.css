@@ -34,7 +34,6 @@ body {
   justify-content: center;
   padding: var(--content-padding) 0;
   width: 60%;
-  background-color: var(--primary-color);
   font-size: 22px;
 }
 
