@@ -97,6 +97,20 @@ import { ClientRouter } from "astro:transitions";
     margin-right: 0px;
   }
 
+  @media (hover: none) {
+    /* Target only devices with no hover ability */
+
+    .nav-links li {
+      transition: transform 0.2s ease;
+      box-shadow: 3px 5px var(--secondary-color);
+    }
+
+    .nav-links li:active {
+      transform: translateX(3px) translateY(4px);
+      box-shadow: none;
+    }
+  }
+
   @media screen and (max-width: 800px) {
     p {
       font-size: 16px;

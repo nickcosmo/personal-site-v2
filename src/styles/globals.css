@@ -23,6 +23,7 @@ body {
   color: var(--secondary-color);
 }
 
+/* TODO maybe make the noise texture fixed and more intense grain */
 body {
   background: transparent;
   margin: auto;
@@ -74,15 +75,9 @@ p {
 
 .bordered {
   border: var(--border-width) solid var(--secondary-color);
-  border-radius: 7em;
+  border-radius: 2.1rem;
   transition: all 0.2s ease;
   corner-shape: squircle;
-}
-
-.bordered_active:hover {
-  transform: translateY(-6px) scale(1.01);
-  /* rotate: 2deg; */
-  box-shadow: 3px 5px var(--secondary-color);
 }
 
 .divider {
@@ -124,6 +119,16 @@ p {
 
 /* Media Queries */
 
+@media (hover: hover) {
+  /* Target only devices with hover ability */
+
+  .bordered_active:hover,
+  .bordered_active:active {
+    transform: translateY(-6px) scale(1.01);
+    box-shadow: 3px 5px var(--secondary-color);
+  }
+}
+
 @media screen and (max-width: 1000px) {
   h1 {
     font-size: 48px;
@@ -151,11 +156,6 @@ p {
     line-height: normal;
     max-height: fit-content;
   }
-
-  .bordered_active:active {
-    transform: translateY(0px) scale(1);
-    box-shadow: none;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -164,6 +164,6 @@ p {
   }
 
   body {
-    width: 92%;
+    width: 93%;
   }
 }
