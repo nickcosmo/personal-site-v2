@@ -44,7 +44,7 @@ const { id, title, description, published, ogImage } = Astro.props;
   <body>
     <Header />
     <Divider />
-    <div class="container fadeIn">
+    <div class="container fadeIn" transition:animate="none">
       <div>
         <h1>{title}</h1>
         <p>
