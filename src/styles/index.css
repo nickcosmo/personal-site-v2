@@ -22,14 +22,6 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .links > li {
-    text-wrap: nowrap;
-  }
-
-  .links {
-    flex-wrap: nowrap;
-  }
-
   .hero-image-container img {
     object-fit: cover;
   }
@@ -44,15 +36,5 @@
     width: 200px;
     height: 150px;
     margin-right: 10px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .links {
-    justify-content: space-between;
-  }
-
-  .links > li {
-    padding: 0 1px;
   }
 }
