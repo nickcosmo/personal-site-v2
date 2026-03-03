@@ -64,7 +64,6 @@ a {
 p {
   line-height: 1.5;
   margin-bottom: var(--content-padding);
-  text-wrap: pretty;
 }
 
 /* Global Classes */
