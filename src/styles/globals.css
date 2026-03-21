@@ -1,18 +1,25 @@
 @import "./reset.css";
 
 :root {
+  font-family: Helvetica, Arial, sans-serif;
+
+  /* Colors */
   --primary-color: #fff;
   --secondary-color: #000;
   --accent-color: royalblue;
   --light-gray: lightgray;
-  --content-padding: 24px;
-  --border-width: 1.5px;
-  font-family: Helvetica, Arial, sans-serif;
-}
 
-@font-face {
-  font-family: "Suisse";
-  src: url("/SuisseIntl-Book.otf") format("opentype");
+  /* Spacing and Sizing */
+  --content-space-lg: 48px;
+  --content-space-md: 24px;
+  --content-space-sm: 12px;
+  --content-space-xsm: 8px;
+  --border-width: 1.5px;
+
+  /* Font Sizes */
+  --header-font-size: 3.6em;
+  --sub-header-font-size: 1.6em;
+  --body-font-size: 1em;
 }
 
 /* Global Tag Styles */
@@ -23,7 +30,6 @@ body {
   color: var(--secondary-color);
 }
 
-/* TODO maybe make the noise texture fixed and more intense grain */
 body {
   background: transparent;
   margin: auto;
@@ -33,7 +39,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: var(--content-padding) 0;
+  padding-bottom: var(--content-space-md);
   width: 60%;
   font-size: 22px;
 }
@@ -43,15 +49,17 @@ main {
 }
 
 h1 {
-  font-size: 62px;
-  line-height: 75px;
+  font-size: var(--header-font-size);
+  line-height: 1.2;
   word-wrap: normal;
   background-image: url("/blue-noise.png");
   background-clip: text;
   color: rgb(0 0 0 / 0%);
+  font-weight: 600;
 }
 
 h2 {
+  font-size: var(--sub-header-font-size);
   background-image: url("/blue-noise.png");
   background-clip: text;
   color: rgb(0 0 0 / 0%);
@@ -63,13 +71,14 @@ a {
 
 p {
   line-height: 1.5;
-  margin-bottom: var(--content-padding);
+  margin-bottom: var(--content-space-sm);
+  font-size: var(--body-font-size);
 }
 
 /* Global Classes */
 
 .container {
-  margin-bottom: var(--content-padding);
+  margin-bottom: var(--content-space-lg);
 }
 
 .bordered {
@@ -77,13 +86,6 @@ p {
   border-radius: 2.1rem;
   transition: all 0.2s ease;
   corner-shape: squircle;
-}
-
-.divider {
-  animation: growFromCenter 0.8s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-  width: 100%;
-  height: var(--border-width);
-  background-color: var(--secondary-color);
 }
 
 .fadeIn {
@@ -159,7 +161,7 @@ p {
 
 @media screen and (max-width: 600px) {
   :root {
-    --content-padding: 15px;
+    --content-space-lg: 24px;
   }
 
   body {

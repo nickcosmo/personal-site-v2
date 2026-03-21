@@ -1,8 +1,8 @@
 ---
+import Divider from "../../components/Divider.astro";
 import Layout from "../../layouts/Layout.astro";
 import "../../styles/globals.css";
 import { getCollection } from "astro:content";
-import Divider from "../../components/Divider.astro";
 
 const blog = await getCollection("blog");
 
@@ -16,7 +16,7 @@ const allPosts = blog
 
 <Layout>
   <div class="container">
-    <h1>Welcome to My Blog!</h1>
+    <h1>Blog</h1>
     <p>
       My goals here are to document my experience building things for the web,
       to explore new ideas and technologies, and to solidify my learnings
@@ -25,6 +25,7 @@ const allPosts = blog
   </div>
   <div class="container">
     <h2>Recent Posts</h2>
+    <Divider />
     <ul>
       {
         allPosts.map((post) => (

@@ -3,7 +3,7 @@ import { ClientRouter } from "astro:transitions";
 ---
 
 <ClientRouter />
-<header class="container" transition:animate="none" transition:persist>
+<header transition:animate="none" transition:persist>
   <div>
     <p>
       nick<span
@@ -51,6 +51,7 @@ import { ClientRouter } from "astro:transitions";
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    margin: var(--content-space-md) 0;
   }
 
   ul {
@@ -137,6 +138,10 @@ import { ClientRouter } from "astro:transitions";
 
     .nav-links li:last-child {
       margin-right: 0px;
+    }
+
+    header {
+      margin: var(--content-space-sm) 0;
     }
   }
 </style>
