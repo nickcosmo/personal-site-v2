@@ -23,7 +23,7 @@ const { id, title, description, published, ogImage } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/pizza.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.png" type="image/png" sizes="16x16" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <meta name="generator" content={Astro.generator} />
     <meta name="author" content="Nick Cosmo" />
@@ -45,9 +45,9 @@ const { id, title, description, published, ogImage } = Astro.props;
     <Header />
     <Divider />
     <div class="container fadeIn" transition:animate="none">
-      <div>
+      <div class="title-container">
         <h1>{title}</h1>
-        <p>
+        <p class="post-timestamp">
           <time>{new Date(published).toLocaleDateString()}</time>
         </p>
       </div>

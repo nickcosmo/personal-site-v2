@@ -2,7 +2,7 @@ pre {
   padding: 1em;
   border-radius: 8px;
   text-wrap: pretty;
-  margin-bottom: var(--content-padding);
+  margin-bottom: var(--content-space-lg);
 
   & > code {
     background-color: inherit;
@@ -10,6 +10,15 @@ pre {
     padding: 0;
     display: inline;
   }
+}
+
+.post-timestamp {
+  background-color: var(--light-gray);
+  padding: 0.2em 0.5em;
+  border-radius: 0.9em;
+  display: inline-block;
+  margin-left: auto;
+  corner-shape: squircle;
 }
 
 code {
@@ -36,11 +45,8 @@ code {
 
 h2,
 h3 {
-  margin-top: calc(var(--content-padding) * 1.5);
-  margin-bottom: calc(var(--content-padding) / 2);
-  background-image: url("/blue-noise.png");
-  background-clip: text;
-  color: rgb(0 0 0 / 0%);
+  margin-top: calc(var(--content-space-lg));
+  margin-bottom: var(--content-space-sm);
 }
 
 img {

@@ -1,6 +1,6 @@
 <footer>
   <p>
-    &#169; 2025 nick<span style="color: var(--accent-color)">cosmo</span>.com
+    &#169; 2025 nick<span>cosmo</span>.com
   </p>
 </footer>
 
@@ -13,6 +13,10 @@
     text-align: center;
     color: var(--text-color);
     margin-bottom: 5px;
+
+    span {
+      color: var(--accent-color);
+    }
   }
 
   footer {
@@ -20,6 +24,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: var(--content-space-lg) 0;
   }
 
   @media screen and (max-width: 700px) {
