@@ -82,11 +82,17 @@ const allPosts = blog
       I'm always open to connecting with other developers, collaborating on
       projects, or just chatting about tech and programming. Feel free to reach
       out to me on{" "}
-      <a href="https://www.linkedin.com/in/nicholasclansing/" target="_blank">
+      <a
+        class="text-link"
+        href="https://www.linkedin.com/in/nicholasclansing/"
+        target="_blank"
+      >
         LinkedIn
-      </a>{" "}
-      or check out my{" "}
-      <a href="https://github.com/nickcosmo" target="_blank">GitHub</a>.
+      </a>
+      or check out my
+      <a class="text-link" href="https://github.com/nickcosmo" target="_blank"
+        >GitHub</a
+      >.
     </p>
   </div>
 </Layout>
@@ -110,5 +116,14 @@ const allPosts = blog
       text-decoration: underline;
       color: var(--accent-color);
     }
+  }
+
+  .text-link {
+    color: var(--secondary-color);
+    text-decoration: underline;
+  }
+
+  .text-link:hover {
+    color: var(--accent-color);
   }
 </style>

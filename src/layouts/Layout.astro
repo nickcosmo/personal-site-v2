@@ -2,17 +2,15 @@
 import Header from "../components/Header.astro";
 import Divider from "../components/Divider.astro";
 import Footer from "../components/Footer.astro";
+import BaseHead from "../components/BaseHead.astro";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/favicon.png" type="image/png" sizes="16x16" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="author" content="Nick Cosmo" />
+    <BaseHead />
+
+    <!-- Title / Description -->
     <title>Nick Cosmo</title>
     <meta
       property="description"
